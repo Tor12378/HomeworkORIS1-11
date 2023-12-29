@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <title>Google</title>
+    <style>
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+        .search {
+            display: grid;
+            grid-template-columns: 44px 1fr 44px 44px 44px;
+            height: 44px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+        }
+
+        .search:is(:hover, :focus-within) {
+            box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+        }
+
+        .search__icon {
+            place-self: center;
+            fill: #9aa0a6;
+        }
+
+        .search__input {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        }
+
+        .search__button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .page,
+        .page__body {
+            height: 100%;
+        }
+
+        .page__body {
+            margin: 0;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .navigation {
+            display: grid;
+            grid-template-columns: 1fr min-content max-content;
+            column-gap: 10px;
+            align-items: center;
+        }
+
+        .navigation__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation__gap {
+            margin-left: auto;
+        }
+
+        .navigation__link {
+            padding: 5px;
+            color: #202124;
+            text-decoration: none;
+        }
+
+        .navigation__link:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            padding: 190px 15px;
+            display: grid;
+            justify-items: center;
+            row-gap: 25px;
+        }
+
+        .main__title {
+            margin: 0;
+        }
+
+        .main__search {
+            justify-self: stretch;
+        }
+
+        .main__buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .main__locale {
+            margin: 0;
+        }
+
+        .main__link {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+
+        .main__link:hover {
+            text-decoration: underline;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr minmax(auto, 584px) 1fr;
+            grid-template-rows: min-content 1fr min-content;
+        }
+
+        .layout__header {
+            grid-column: 1 / -1;
+            padding: 10px 30px;
+        }
+
+        .layout__main {
+            grid-column: 2 / -2;
+
+        }
+
+        .layout__footer {
+            grid-column: 1 / -1;
+        }
+
+        .header {
+            padding: 15px 30px;
+        }
+
+        .footer {
+           display: flex;
+           flex-wrap: wrap;
+
+           background-color: #f2f2f2;
+           color: #70757a;
+       }
+
+       .footer__text {
+           width: 100%;
+           margin: 0;
+           padding: 15px 30px;
+           border-bottom: 1px solid #dadce0;
+       }
+
+
+       .footer__list {
+           display: grid;
+           grid-template-columns: 115px 86px 112px 407px 22px 781px 172px 84px 97px;
+           list-style: none; 
+
+       }
+
+
+       .footer__link {
+
+           text-decoration: none;
+           color: #70757a;
+       }
+
+        .button {
+            margin: 0;
+            padding: 9px 23px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .button:is(:hover, :focus) {
+            box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+        }
+
+        .button--plain {
+            border: 1px solid #f8f9fa;
+            background-color: #f8f9fa;
+            color: #3c4043;
+        }
+
+        .button--action {
+            border: 1px solid #1a73e8;
+            background-color: #1a73e8;
+            color: #ffffff;
+        }
+
+        .button--action:is(:hover, :focus) {
+            background-color: #1b66c9;
+        }
+
+        .apps {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .apps__icon {
+            margin: auto;
+            display: block;
+            fill: #5f6368;
+        }
+
+        .apps:is(:hover, :focus) {
+            background-color: #f2f2f2;
+        }
+        .main_table{
+          width: 580px;
+          height: 300px;
+        }
+        .logo{
+          padding-left: 0px;
+          border-left-width: 50px;
+          margin-left: 150px;
+          margin-bottom: 25px;
+}
+    </style>
+</head>
+<body class="page__body layout">
+    <header class="layout__header header">
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__gap"><a class="navigation__link" href="https://www.google.com/gmail/about/">Почта</a></li>
+                <li><a class="navigation__link" href="https://www.google.ru/imghp?hl=ru&ogbl">Картинки</a></li>
+            </ul>
+            <button class="apps" type="button" aria-label="Apps">
+							<img class="apps__icon" src="images/apps.svg" width="24" height="24">
+            </button>
+            <a class="button button--action" href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.ru%2Fimghp%3Fhl%3Dru%26ogbl&ec=GAZAAg&hl=ru&ifkv=AYZoVhdpyxxcBn54V0NhkX4i5pCTvdmvQj8nfWR2jczUMO3-b2lnwfGE1POUrR1hspmvWV5G63Go&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-116507311%3A1694121432029896&theme=glif">Войти</a>
+        </nav>
+    </header>
+    <main class="layout__main main">
+        <div class="main_table">
+        <img  class="logo" src="images/logo.svg" width="272" height="92" alt="Google">
+        <search class="main__search">
+            <form action="https://www.google.ru/search" method="get">
+                <div class="search">
+                    <img class="search__icon" src="images/search.png" width="20" height="20" aria-hidden="true">
+                    <input class="search__input" name="q" type="search" aria-label="Search">
+                    <button class="search__button" type="button" aria-label="KeyBoard">
+                        <img class="search__feature" src="images/keyboard.png" width="40" height="40">
+                    </button>
+                    <button class="search__button" type="button" aria-label="Search by Voice">
+                        <img class="search__feature" src="images/searchVoiceLogo.png" width="24" height="24">
+                    </button>
+                    <button class="search__button" type="button" aria-label="Search by Image">
+                        <img class="search__feature" src="images/searchImageLogo.png" width="24" height="24">
+                    </button>
+                </div>
+                <div class="main__buttons">
+                    <button class="button button--plain" type="submit">Поиск в Google</button>
+                    <button class="button button--plain" type="button">Мне повезет!</button>
+                </div>
+            </form>
+        </search>
+      </div>
+    </main>
+    <footer class="layout__footer footer">
+    <p class="footer__text">Россия</p>
+    <ul class="footer__list">
+			<li><a class="footer__link" href="https://about.google/?utm_source=google-RU&utm_medium=referral&utm_campaign=hp-footer&fg=1">Всё о Google</a></li>
+			<li><a class="footer__link" href="https://ads.google.com/intl/ru_ru/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Реклама</a></li>
+			<li><a class="footer__link" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Для бизнеса</a></li>
+      <li><a class="footer__link" href="https://www.google.com/search/howsearchworks/?fg=1">Как работает Google Поиск</a></li>
+      <li><img  src="images/footer.png" width="19" height="16"></li>
+      <li><a class="footer__link" href="https://sustainability.google/intl/ru/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=#home">Наше третье десятилетие борьбы с изменением климата</a></li>
+      <li><a class="footer__link" href="https://policies.google.com/privacy?hl=ru&fg=1">Конфиденциальность</a></li>
+			<li><a class="footer__link" href="https://policies.google.com/terms?hl=ru&fg=1">Условия</a></li>
+			<li><a class="footer__link" href="">Настройки</a></li>
+		</ul>
+
+</footer>
+</body>
+</html>
